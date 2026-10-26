@@ -1,0 +1,28 @@
+Manting online speech protocol reference
+
+The Microsoft Edge Read Aloud wire protocol was researched using rany2/edge-tts:
+https://github.com/rany2/edge-tts
+https://github.com/rany2/edge-tts/blob/master/src/edge_tts/communicate.py
+https://github.com/rany2/edge-tts/blob/master/src/edge_tts/constants.py
+https://github.com/rany2/edge-tts/blob/master/src/edge_tts/drm.py
+
+SpeechService.swift is an independently written Swift implementation using macOS
+system frameworks. No Python package, executable, or source from edge-tts is
+included in this app. Protocol field names, format identifiers, endpoint details
+and public client constants are used for interoperability.
+
+This app is not affiliated with, sponsored by, or endorsed by Microsoft. Online
+voices require network access and send the selected text to Microsoft's speech
+service. Service availability and interface compatibility can change. The app
+does not charge for speech and does not ask for an API key. The optional Tingting
+voice is generated locally by macOS and does not send text to a speech service.
+
+Pinyin annotations
+
+pinyin-pro 3.29.4, Copyright (c) 2022-present zh-lx, MIT License.
+https://github.com/zh-lx/pinyin-pro
+https://registry.npmjs.org/pinyin-pro/-/pinyin-pro-3.29.4.tgz
+The unmodified dist/index.js runs in macOS JavaScriptCore without browser, file,
+or network APIs. The MIT license is included as pinyin-pro-LICENSE.txt. Package
+integrity: sha512-SPXpDT2cHEy+d26V1RXYMlVzXN42hotFAak1fzyWPi4o2dKXb61UqD4pzxDJHwk6gbv8vQ6EfErd+hYX0Qhzug==
+Only display annotations are generated; source text and speech audio are unchanged.
