@@ -2,7 +2,7 @@
 
 ![慢听界面：左侧收听列表，右侧大字正文与全文拼音，底部播放器](assets/screenshot.jpg)
 
-用于 macOS 的免费文本朗读 app。构建后把 `build/慢听.app` 复制到 `~/Applications/`；双击后粘贴文字，点“开始朗读”。无账号、API key、付费或依赖安装步骤。
+用于 macOS 的免费文本朗读 app。粘贴文字，点“开始朗读”。无账号、API key、付费或依赖安装步骤。
 
 - 晓晓 / 云希：免费在线中文神经语音，文字会发送给 Microsoft Edge 朗读服务。
 - 婷婷：macOS 本机语音，不联网。
@@ -20,6 +20,19 @@
 - 删除条目：右键收听列表中的条目，或点右上角废纸篓；确认后将正文、进度和缓存音频一起移到 macOS 废纸篓。删除其他条目不会中断当前播放。
 - 长文边生成边播放。全部准备好以前总时长显示“约”；跳到未生成段落时从该段开头准备。
 - 退出 app 会保存进度；关闭窗口继续后台播放。重新打开默认暂停，点“继续听”。Mac 休眠时自动暂停。
+
+## 下载
+
+[下载 慢听 1.4.2（DMG，Apple Silicon，macOS 14 及以上）](https://github.com/xnklerEd/Manting/releases/latest) · 775 KB
+
+SHA-256：`baa925a37925cfd7e32ef7dcd047a44f3ec8e1f9a0af47dd73078d62dd02e0f6`
+
+app 用 ad-hoc 签名，没有 Apple 开发者签名与公证，首次打开会被 Gatekeeper 拦。任选一种方式放行：
+
+1. 「应用程序」里按住 Control 点「慢听」→「打开」→ 再点「打开」，只需一次。
+2. 终端执行 `xattr -dr com.apple.quarantine "/Applications/慢听.app"`
+
+DMG 内附「首次打开必读.txt」，内容相同。想自己构建：`bash scripts/build.sh`，产物为 `build/慢听.app`。
 
 资料目录：`~/Library/Application Support/Manting`。包含正文、分段音频、阅读进度和上一版本备份。删除条目的废纸篓文件夹以文章 UUID 命名，`document.json` 保存原文和进度；尚不支持在 app 内一键恢复。请勿在播放期间手动移动资料目录。
 
