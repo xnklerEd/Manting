@@ -1,5 +1,7 @@
 # 慢听
 
+![慢听界面：左侧收听列表，右侧大字正文与全文拼音，底部播放器](assets/screenshot.jpg)
+
 用于 macOS 的免费文本朗读 app。构建后把 `build/慢听.app` 复制到 `~/Applications/`；双击后粘贴文字，点“开始朗读”。无账号、API key、付费或依赖安装步骤。
 
 - 晓晓 / 云希：免费在线中文神经语音，文字会发送给 Microsoft Edge 朗读服务。
